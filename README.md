@@ -1,7 +1,12 @@
 # AI Knowledge Inbox
 
 A single-user knowledge inbox built with **React + TypeScript, FastAPI, SQLite, and OpenAI**. Save notes or public webpages, then ask questions with citations back to the exact retrieved passages. No account, containers, or hosted database required.
+<img width="1917" height="1017" alt="image" src="https://github.com/user-attachments/assets/da4ac130-0fb9-42e4-a8dd-b49d1b066590" />
+<img width="761" height="745" alt="image" src="https://github.com/user-attachments/assets/3515958c-18b2-42e3-8937-6e005fc49d3e" />
 
+I have taken UI design inspiration from the Turium AI website. Please refer above screenshots
+The project title is **Knowledge Inbox** and the AI assistant is named **KIN (Knowledge Inbox)**.
+We can modify the `.env` file content as needed. I have shared the `.env` file via email.
 
 ## Run locally
 
@@ -148,6 +153,5 @@ npm run test:e2e
 
 The browser suite uses an installed Microsoft Edge. On a machine without Edge, run `npx playwright install msedge` first, or change `channel: 'msedge'` in `playwright.config.ts` to a locally available Playwright Chromium configuration. Screenshots and failure traces go to the ignored `artifacts/` directory. The server is stopped automatically after tests.
 
-Tests cover ingest → index → query → citations → delete, persistence/model changes, recovery, retrieval, URL extraction, private/redirect address rejection, provider errors, body limits, and frontend ingestion/query failures. OpenAI HTTP calls are mocked: tests require no real key and make no paid requests. A real provider smoke test still requires your API key and model access. `backend/requirements-lock.txt` records the tested Python environment; the two unpinned requirements files describe direct runtime/dev dependency ranges.
 
 API references: [OpenAI embeddings](https://developers.openai.com/api/docs/guides/embeddings), [OpenAI Responses](https://developers.openai.com/api/reference/python/resources/responses/methods/create), [aiohttp custom resolvers](https://docs.aiohttp.org/en/stable/client_advanced.html#resolving-using-custom-nameservers).
