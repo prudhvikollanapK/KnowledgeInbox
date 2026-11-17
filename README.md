@@ -1,7 +1,12 @@
 # AI Knowledge Inbox
 
 A single-user knowledge inbox built with **React + TypeScript, FastAPI, SQLite, and OpenAI**. Save notes or public webpages, then ask questions with citations back to the exact retrieved passages. No account, containers, or hosted database required.
+<img width="1917" height="1017" alt="image" src="https://github.com/user-attachments/assets/da4ac130-0fb9-42e4-a8dd-b49d1b066590" />
+<img width="761" height="745" alt="image" src="https://github.com/user-attachments/assets/3515958c-18b2-42e3-8937-6e005fc49d3e" />
 
+I have taken UI design inspiration from the Turium AI website. Please refer above screenshots
+The project title is **Knowledge Inbox** and the AI assistant is named **KIN (Knowledge Inbox)**.
+We can modify the `.env` file content as needed. I have shared the `.env` file via email.
 
 ## Run locally
 
