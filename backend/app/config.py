@@ -23,7 +23,7 @@ class Settings(BaseSettings):
     cors_origins: str = "http://localhost:5173,http://127.0.0.1:5173"
     app_name: str = Field(default="INBOX", min_length=1, max_length=80)
     app_title: str = Field(default="Knowledge inbox", min_length=1, max_length=120)
-    assistant_name: str = Field(default="Zebra", min_length=1, max_length=80)
+    assistant_name: str = Field(default="KIN", min_length=1, max_length=80)
     assistant_title: str = Field(default="How can I help you today?", min_length=1, max_length=180)
     assistant_placeholder: str = Field(
         default="Ask anything about your saved content…",

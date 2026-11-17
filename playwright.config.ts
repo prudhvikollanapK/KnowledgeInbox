@@ -43,7 +43,7 @@ export default defineConfig({
       OPENAI_API_KEY: "",
       APP_NAME: "INBOX",
       APP_TITLE: "Knowledge inbox",
-      ASSISTANT_NAME: "Zebra",
+      ASSISTANT_NAME: "KIN",
       ASSISTANT_TITLE: "How can I help you today?",
       ASSISTANT_PLACEHOLDER: "Ask anything about your saved content…",
       ASSISTANT_SUGGESTIONS:

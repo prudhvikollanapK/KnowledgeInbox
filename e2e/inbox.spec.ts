@@ -42,7 +42,7 @@ test("saved items, cited answers, inline detail, and deletion", async ({
   await expect(page.locator(".chat-window")).toHaveCount(0);
   await page.getByRole("textbox", { name: "Question" }).focus();
   await expect(page.locator(".chat-window")).toBeVisible();
-  await expect(page.locator(".chat-header strong")).toHaveText("Zebra");
+  await expect(page.locator(".chat-header strong")).toHaveText("KIN");
   await page.screenshot({
     path: `artifacts/${testInfo.project.name}-chat-welcome.png`,
     fullPage: true,
