@@ -8,25 +8,38 @@ import type {
   SourceType,
 } from "./types";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+const API_BASE_URL = (
+  import.meta.env.VITE_API_BASE_URL || ""
+).replace(/\/$/, "");
+
 
 async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
+  const headers = new Headers(options.headers);
+
+  if (options.body !== undefined && options.body !== null) {
+    headers.set("Content-Type", "application/json");
+  }
+
   const response = await fetch(`${API_BASE_URL}/api${path}`, {
     ...options,
-    headers: { "Content-Type": "application/json", ...options.headers },
+    headers,
   });
+
   if (!response.ok) {
     const payload = await response.json().catch(() => null);
     const error = payload?.error;
     const fieldMessage = error?.fields?.[0]?.message;
+
     throw new Error(
       fieldMessage ||
         error?.message ||
         `Request failed (${response.status}). Please try again.`,
     );
   }
+
   return response.status === 204 ? (undefined as T) : response.json();
 }
+
 
 export const api = {
   health: (signal?: AbortSignal) => request<Health>("/health", { signal }),
